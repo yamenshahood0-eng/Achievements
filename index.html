@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yamen Shahood | Portfolio</title>
     <style>
-        /* إعدادات الصفحة الأساسية */
         body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -19,7 +18,6 @@
             padding-bottom: 50px;
         }
 
-        /* حاوية الشهادة والملف الشخصي */
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -28,67 +26,74 @@
             margin-top: 50px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
             max-width: 700px;
             width: 90%;
-            position: relative; /* لتحديد موقع العناصر الداخلية */
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
-            border: 1px solid rgba(0, 212, 255, 0.3);
-        }
-
-        /* تنسيق الصورة الشخصية الدائرية في الأعلى */
         .profile-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%; /* تجعلها دائرية */
-            object-fit: cover; /* لضمان عدم تمدد الصورة */
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00d4ff;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin: 10px 0;
             background: linear-gradient(to right, #00d4ff, #0083b0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        h3 {
-            color: #bdc3c7;
-            font-weight: 300;
-            letter-spacing: 1px;
+        /* تنسيق قسم About Me */
+        .about-section {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .about-section h2 {
+            color: #00d4ff;
+            font-size: 1.5rem;
             margin-top: 0;
+            margin-bottom: 15px;
         }
 
-        /* تنسيق الشهادة */
+        .about-section p {
+            line-height: 1.8;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .highlight {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
         .cert-container {
             margin-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-        }
-
-        .cert-title {
-            color: #00d4ff;
-            font-weight: bold;
-            margin-bottom: 10px;
+            padding-top: 25px;
         }
 
         .certificate-img {
             width: 100%;
             border-radius: 12px;
-            margin: 10px 0 20px 0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            border: 2px solid rgba(255,255,255,0.05);
+            margin-top: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* زر التواصل */
         .btn {
             display: inline-block;
             padding: 12px 35px;
@@ -97,16 +102,13 @@
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
+            margin-top: 30px;
             transition: all 0.3s ease;
-            margin-top: 10px;
-            border: none;
-            cursor: pointer;
         }
 
         .btn:hover {
-            opacity: 0.9;
+            transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -116,18 +118,25 @@
         <img src="my-avatar.jpg" class="profile-avatar" alt="Yamen Shahood">
         
         <h1>YAMEN SHAHOOD</h1>
-        <h3>Software Engineering Student</h3>
+        <h3 style="color: #bdc3c7; font-weight: 400; margin-top: -5px;">Software Engineering Student</h3>
+
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>
+                First-year student in the <span class="highlight">Faculty of Informatics Engineering at Homs University</span>, 
+                based in Homs, Syria. I aim to develop software and solve algorithmic problems. 
+                I am currently following the <span class="highlight">Abu-Hadhoud roadmap</span> and striving to improve myself every day.
+            </p>
+        </div>
         
         <div class="cert-container">
-            <p class="cert-title">Algorithms Level - 1 Certificate</p>
-            
-            <img src="yamen.jpg" class="certificate-img" alt="My Certificate">
+            <h2 style="font-size: 1.4rem; color: #fff; margin-bottom: 5px;">Certifications</h2>
+            <p style="color: #00d4ff; margin-top: 0;">Algorithms Level - 1</p>
+            <img src="yamen.jpg" class="certificate-img" alt="Yamen's Certificate">
         </div>
 
-        <a href="https://www.linkedin.com/in/your-profile-name" class="btn" target="_blank">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/YOUR_PROFILE" class="btn" target="_blank">LinkedIn Profile</a>
     </div>
 
 </body>
 </html>
-        
-
