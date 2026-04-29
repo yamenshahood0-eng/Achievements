@@ -2,30 +2,102 @@
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <title>Yamen Shahood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamen Shahood | Portfolio</title>
     <style>
-        body { 
-            background-color: #1a1a1a; 
-            color: white; 
-            text-align: center; 
-            font-family: sans-serif; 
-            padding-top: 50px; 
+        /* إعدادات الصفحة الأساسية */
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .certificate { 
-            margin: 20px; 
-            border: 5px solid #333; 
-            border-radius: 10px; 
-            width: 80%; 
-            max-width: 600px; 
+
+        /* حاوية الشهادة */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+        }
+
+        /* حركة عند مرور الماوس على الكرت */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+            border: 1px solid rgba(0, 212, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #00d4ff, #0083b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+            color: #bdc3c7;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .certificate {
+            width: 100%;
+            border-radius: 12px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: filter 0.3s ease;
+        }
+
+        /* زر التواصل */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #00d4ff, #0083b0);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
         }
     </style>
 </head>
 <body>
-    <h1>Hello there</h1>
-    <h3>Algorithms level-1</h3>
-    
-    <img src="my_cert.jpg" class="certificate" alt="Certificate">
-    
-    <p>Contact Me</p>
+
+    <div class="card">
+        <h1>YAMEN SHAHOOD</h1>
+        <h3>Software Engineering Student</h3>
+        
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin: 20px auto; width: 50%;"></div>
+        
+        <p>Algorithms Level - 1 Certificate</p>
+        
+        <img src="yamen.jpg" class="certificate" alt="My Certificate">
+
+        <br>
+        <a href="yamenshahood0@gmail.com" class="btn">Contact Me</a>
+    </div>
+
 </body>
 </html>
+  
+
