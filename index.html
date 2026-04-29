@@ -16,14 +16,15 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            padding-bottom: 50px;
         }
 
-        /* حاوية الشهادة */
+        /* حاوية الشهادة والملف الشخصي */
         .card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 30px;
+            padding: 40px;
             margin-top: 50px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -31,18 +32,29 @@
             text-align: center;
             max-width: 700px;
             width: 90%;
+            position: relative; /* لتحديد موقع العناصر الداخلية */
         }
 
-        /* حركة عند مرور الماوس على الكرت */
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
-            border: 1px solid rgba(0, 212, 255, 0.5);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        /* تنسيق الصورة الشخصية الدائرية في الأعلى */
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* تجعلها دائرية */
+            object-fit: cover; /* لضمان عدم تمدد الصورة */
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
         }
 
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin: 10px 0;
             background: linear-gradient(to right, #00d4ff, #0083b0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -52,52 +64,70 @@
             color: #bdc3c7;
             font-weight: 300;
             letter-spacing: 1px;
+            margin-top: 0;
         }
 
-        .certificate {
+        /* تنسيق الشهادة */
+        .cert-container {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .cert-title {
+            color: #00d4ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .certificate-img {
             width: 100%;
             border-radius: 12px;
-            margin: 20px 0;
-            cursor: pointer;
-            transition: filter 0.3s ease;
+            margin: 10px 0 20px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border: 2px solid rgba(255,255,255,0.05);
         }
 
         /* زر التواصل */
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 12px 35px;
             background: linear-gradient(45deg, #00d4ff, #0083b0);
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: opacity 0.3s;
-            margin-top: 20px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
         }
 
         .btn:hover {
             opacity: 0.9;
             box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
     <div class="card">
+        <img src="my-avatar.jpg" class="profile-avatar" alt="Yamen Shahood">
+        
         <h1>YAMEN SHAHOOD</h1>
         <h3>Software Engineering Student</h3>
         
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin: 20px auto; width: 50%;"></div>
-        
-        <p>Algorithms Level - 1 Certificate</p>
-        
-        <img src="yamen.jpg" class="certificate" alt="My Certificate">
+        <div class="cert-container">
+            <p class="cert-title">Algorithms Level - 1 Certificate</p>
+            
+            <img src="yamen.jpg" class="certificate-img" alt="My Certificate">
+        </div>
 
-        <br>
-       <a href="https://www.linkedin.com/in/yamen shahood" class="btn">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/your-profile-name" class="btn" target="_blank">LinkedIn Profile</a>
     </div>
 
 </body>
 </html>
-  
+        
 
